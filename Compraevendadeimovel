@@ -1,0 +1,23 @@
+// SPDX-License-Identifier: GPL-3.0-or-later
+
+pragma solidity 0.8.4;
+
+contract CompraeVendadeImovel {
+    
+    string public comprador;
+    string public vendedor;
+    string public imovel;
+    uint public ValorPagamento;
+    uint constant NumeroMaximodeDiasparaMulta = 30;
+    
+    constructor() {
+        comprador = "Marcelo";
+        vendedor = "Mariana";
+        imovel = "RuaFlorianoPeixoto616,Centro,SaoPaulo";
+        ValorPagamento = 5000;
+    }
+    
+    function definirValordaMulta(uint ValordaMulta) public view {
+        ValordaMulta = ValorPagamento/10;
+    }
+}
