@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: CC-BY-4.0
 pragma solidity 0.8.4;
 
-contract ApresentacaoMusical {
+contract ContratodeApresentacaodeShowMusical {
     
     string public Contratante;
     string public Contratado;
@@ -26,10 +26,17 @@ contract ApresentacaoMusical {
         Musicas[2] = "Alligator";
         Musicas[3] = "Visitor";
         Musicas[4] = "Destroyer";
-        Musicas[5] = "Wolves Without Teeth";
+        Musicas[5] = "Slow and Steady";
         Musicas[6] = "Circles";
         Musicas[7] = "Ahay";
-        Musicas[8] = "Little Talks";
+        Musicas[8] = "Vulture, Vulture";
+        Musicas[9] = "Stuck in Gravity";
+        Musicas[10] = "Under a Dome";
+        Musicas[11] = "Thousand Eyes";
+        Musicas[12] = "Organs";
+        Musicas[13] = "Mountain Sound";
+        Musicas[14] = "Wolves Without Teeth";
+        Musicas[15] = "Little Talks";
     }
     
     address henriquenmr;
@@ -40,8 +47,9 @@ contract ApresentacaoMusical {
     function Token() private {
         henriquenmr = msg.sender;
     }
+    
      modifier verificarNumeroMaximodeMusicas {
-        require(msg.value <= NumeroMaximodeMusicas, "Repertorio ja esta completo");
+        require(msg.value <= NumeroMaximodeMusicas, "Repertorio atingiu o seu limite");
         _;
     }
 }
