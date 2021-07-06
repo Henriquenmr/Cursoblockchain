@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: CC-BY-4.0
 pragma solidity 0.8.4;
 
-contract ApresentacaoMusical {
+contract ApresentacaodeShowMusical {
     
     string public Contratante;
     string public Contratado;
@@ -41,8 +41,8 @@ contract ApresentacaoMusical {
         Musicas[15] = "Little Talks";
     }
     
-     modifier verificarNumeroMaximodeMusicas {
-        require(msg.value <= NumeroMaximodeMusicas, "Repertorio atingiu o seu limite");
+     modifier AdicionarMusicasaoRepertorio {
+        require(msg.sender == owner, "Apenas o owner pode adicionar musicas ao repertorio");
         _;
     }
 }
